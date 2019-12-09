@@ -23,12 +23,8 @@
   ?>
 
   <!-- ▼　スタイルシート -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/_reset.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/style.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/_top.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/_about.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/_single.css">
 
   <!-- fontawesome -->
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
