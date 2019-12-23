@@ -1,0 +1,41 @@
+@charset "utf-8";/* 必須 */
+$mac_width: 1500px; //MacBook・ノートPC
+$note_width: 1367px; //iPad(横)・iPadPro
+$tab_width: 1024px; //iPadmini(横)
+$phab_width: 768px; //iPadmini(縦)
+$sp_width: 414px; //スマホ
+
+/*——————— ▼ MacBook・ノートPC ———————*/
+@mixin media_mac {
+  @media screen and (max-width: $mac_width) {
+    @content;
+  }
+}
+
+/*——————— ▼ iPad(横)・iPadPro　———————*/
+@mixin media_note {
+  @media screen and (max-width: $note_width) {
+    @content;
+  }
+}
+
+/*——————— ▼ iPad mini(横) ———————*/
+@mixin media_tab {
+  @media screen and (max-width: $tab_width) {
+    @content;
+  }
+}
+
+/*——————— ▼ iPad mini(縦) ———————*/
+@mixin media_phab {
+  @media screen and (max-width: $phab_width) {
+    @content;
+  }
+}
+
+/*——————— ▼ スマホ ———————*/
+@mixin media_sp {
+  @media screen and (max-width: $sp_width) {
+    @content;
+  }
+}
