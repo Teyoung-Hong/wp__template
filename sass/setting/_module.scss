@@ -1,0 +1,451 @@
+@charset "utf-8";/* 必須 */
+/*========================================================
+
+  1.コンテンツレイアウト
+  2.フォントサイズ
+
+========================================================*/
+
+/*========================================================
+
+  1.コンテンツレイアウト
+
+========================================================*/
+.col-container{
+  width:100%;
+  @include flexbox;
+  @include wrap;
+
+  &.align-top{
+    @include align(flex-start);
+  }
+
+  &.align-center{
+    @include align(center);
+  }
+
+  &.align-bottom{
+    @include align(flex-end);
+  }
+
+  .item-align-top{
+    margin-bottom:auto;
+  }
+
+  .item-align-center{
+    margin:auto 0;
+  }
+
+  .item-align-bottom{
+    margin-top:auto;
+  }
+
+
+  /*——————— ▼ PC ———————*/
+  .col-l-12{
+    width: ((100% / 12) * 12);
+  }
+
+  .col-l-11{
+    width: ((100% / 12) * 11);
+  }
+
+  .col-l-10{
+    width: ((100% / 12) * 10);
+  }
+
+  .col-l-9{
+    width: ((100% / 12) * 9);
+  }
+
+  .col-l-8{
+    width: ((100% / 12) * 8);
+  }
+
+  .col-l-7{
+    width: ((100% / 12) * 7);
+  }
+
+  .col-l-6{
+    width: ((100% / 12) * 6);
+  }
+
+  .col-l-5{
+    width: ((100% / 12) * 5);
+  }
+
+  .col-l-4{
+    width: ((100% / 12) * 4);
+  }
+
+  .col-l-3{
+    width: ((100% / 12) * 3);
+  }
+
+  .col-l-2{
+    width: ((100% / 12) * 2);
+  }
+
+  .col-l-1{
+    width: ((100% / 12) * 1);
+  }
+
+  /*——————— ▼ tab ———————*/
+  .col-m-12{
+
+  @include media_tab {
+      width: ((100% / 12) * 12);
+    }
+
+  }
+
+  .col-m-11{
+
+  @include media_tab {
+      width: ((100% / 12) * 11);
+    }
+
+  }
+
+  .col-m-10{
+
+  @include media_tab {
+      width: ((100% / 12) * 10);
+    }
+
+  }
+
+  .col-m-9{
+
+    @include media_tab {
+      width: ((100% / 12) * 9);
+    }
+
+  }
+
+  .col-m-8{
+
+    @include media_tab {
+      width: ((100% / 12) * 8);
+    }
+
+  }
+
+  .col-m-7{
+
+    @include media_tab {
+      width: ((100% / 12) * 7);
+    }
+
+  }
+
+  .col-m-6{
+
+    @include media_tab {
+      width: ((100% / 12) * 6);
+    }
+
+  }
+
+  .col-m-5{
+
+    @include media_tab {
+      width: ((100% / 12) * 5);
+    }
+
+  }
+
+  .col-m-4{
+
+    @include media_tab {
+      width: ((100% / 12) * 4);
+    }
+
+  }
+
+  .col-m-3{
+
+    @include media_tab {
+      width: ((100% / 12) * 3);
+    }
+
+  }
+
+  .col-m-2{
+
+    @include media_tab {
+      width: ((100% / 12) * 2);
+    }
+
+  }
+
+  .col-m-1{
+
+    @include media_tab {
+      width: ((100% / 12) * 1);
+    }
+
+  }
+
+  /*——————— ▼ phab ———————*/
+  .col-sm-12{
+
+  @include media_phab {
+      width: ((100% / 12) * 12);
+    }
+
+  }
+
+  .col-sm-11{
+
+  @include media_phab {
+      width: ((100% / 12) * 11);
+    }
+
+  }
+
+  .col-sm-10{
+
+  @include media_phab {
+      width: ((100% / 12) * 10);
+    }
+
+  }
+
+  .col-sm-9{
+
+    @include media_phab {
+      width: ((100% / 12) * 9);
+    }
+
+  }
+
+  .col-sm-8{
+
+    @include media_phab {
+      width: ((100% / 12) * 8);
+    }
+
+  }
+
+  .col-sm-7{
+
+    @include media_phab {
+      width: ((100% / 12) * 7);
+    }
+
+  }
+
+  .col-sm-6{
+
+    @include media_phab {
+      width: ((100% / 12) * 6);
+    }
+
+  }
+
+  .col-sm-5{
+
+    @include media_phab {
+      width: ((100% / 12) * 5);
+    }
+
+  }
+
+  .col-sm-4{
+
+    @include media_phab {
+      width: ((100% / 12) * 4);
+    }
+
+  }
+
+  .col-sm-3{
+
+    @include media_phab {
+      width: ((100% / 12) * 3);
+    }
+
+  }
+
+  .col-sm-2{
+
+    @include media_phab {
+      width: ((100% / 12) * 2);
+    }
+
+  }
+
+  .col-sm-1{
+
+    @include media_phab {
+      width: ((100% / 12) * 1);
+    }
+
+  }
+
+  /*——————— ▼ sp ———————*/
+  .col-s-12{
+
+  @include media_sp {
+      width: ((100% / 12) * 12);
+    }
+
+  }
+
+  .col-s-11{
+
+  @include media_sp {
+      width: ((100% / 12) * 11);
+    }
+
+  }
+
+  .col-s-10{
+
+  @include media_sp {
+      width: ((100% / 12) * 10);
+    }
+
+  }
+
+  .col-s-9{
+
+    @include media_sp {
+      width: ((100% / 12) * 9);
+    }
+
+  }
+
+  .col-s-8{
+
+    @include media_sp {
+      width: ((100% / 12) * 8);
+    }
+
+  }
+
+  .col-s-7{
+
+    @include media_sp {
+      width: ((100% / 12) * 7);
+    }
+
+  }
+
+  .col-s-6{
+
+    @include media_sp {
+      width: ((100% / 12) * 6);
+    }
+
+  }
+
+  .col-s-5{
+
+    @include media_sp {
+      width: ((100% / 12) * 5);
+    }
+
+  }
+
+  .col-s-4{
+
+    @include media_sp {
+      width: ((100% / 12) * 4);
+    }
+
+  }
+
+  .col-s-3{
+
+    @include media_sp {
+      width: ((100% / 12) * 3);
+    }
+
+  }
+
+  .col-s-2{
+
+    @include media_sp {
+      width: ((100% / 12) * 2);
+    }
+
+  }
+
+  .col-s-1{
+
+    @include media_sp {
+      width: ((100% / 12) * 1);
+    }
+
+  }
+
+}
+
+/*========================================================
+
+  2.フォントサイズ
+
+========================================================*/
+@mixin fs($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+}
+
+$fz-xx:3.2; //h2 見出し
+$fz-xl:2.8; //h3 サブタイトル
+$fz-l:2.2; //h4 小見出し
+$fz-m:1.8; //h5 文頭
+$fz-s:1.4; //p 本文
+
+@mixin fz-xx{
+  font-size:$fz-xx + px;
+  font-size:$fz-xx + rem;
+
+  @include media_sp {
+    font-size: 28px;
+    font-size:2.8rem;
+  }
+
+}
+@mixin fz-xl{
+  font-size:$fz-xl + px;
+  font-size:$fz-xl + rem;
+
+  @include media_sp {
+    font-size: 24px;
+    font-size:2.4rem;
+  }
+
+}
+@mixin fz-l{
+  font-size:$fz-l + px;
+  font-size:$fz-l + rem;
+
+  @include media_sp {
+    font-size: 18px;
+    font-size:1.8rem;
+  }
+
+}
+@mixin fz-m{
+  font-size:$fz-m + px;
+  font-size:$fz-m + rem;
+
+  @include media_sp {
+    font-size: 16px;
+    font-size:1.6rem;
+  }
+
+}
+@mixin fz-s{
+  font-size:$fz-s + px;
+  font-size:$fz-s + rem;
+
+  @include media_sp {
+    font-size: 12px;
+    font-size:1.2rem;
+  }
+
+}

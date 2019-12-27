@@ -1,0 +1,235 @@
+@charset "utf-8";
+/*========================================================
+
+  1.transform
+  2.flex-box
+  3.gradient
+  4.position
+  5.other
+
+========================================================*/
+
+/*========================================================
+
+  1.transform
+
+========================================================*/
+//ベンダープレフィックス
+$set-prefix: -webkit-, -moz-, -ms-, -o-, '';
+
+
+/*——————— ▼ transition ———————*/
+@mixin transition($value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}transition:all $value ease;
+  }
+}
+
+/*——————— ▼ translate ———————*/
+@mixin translate ($x-value, $y-value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}transform:translate($x-value, $y-value);
+  }
+}
+
+/*——————— ▼ scale ———————*/
+@mixin scale ($x-value, $y-value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}transform:scale($x-value, $y-value);
+  }
+}
+
+/*——————— ▼ rotate ———————*/
+@mixin rotate ($value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}transform:rotate($value);
+  }
+}
+
+/*——————— ▼ rotateX ———————*/
+@mixin rotateX ($value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}transform:rotateX($value);
+  }
+}
+
+/*——————— ▼ rotateY ———————*/
+@mixin rotateY ($value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}transform:rotateY($value);
+  }
+}
+
+/*==================================================
+
+  2.flex-box
+
+==================================================*/
+
+/*——————— ▼ flexbox ———————*/
+@mixin flexbox{
+  display:-webkit-box; // old
+  display:-moz-box; // old
+  display:-ms-flexbox; // ie
+  display:-webkit-flex; // new
+  display:flex; // new
+}
+
+/*——————— ▼ justify-content ———————*/
+@mixin justify($value){
+  -webkit-justify-content: $value;   // safari用
+  justify-content: $value;
+}
+
+/*——————— ▼ align-items ———————*/
+@mixin align($value){
+  -webkit-align-items: $value;   // safari用
+  align-items: $value;
+}
+
+/*——————— ▼ flex-wrap ———————*/
+@mixin wrap{
+  -webkit-flex-wrap: wrap;   // safari用
+  flex-wrap: wrap;
+}
+
+/*——————— ▼ flex ———————*/
+@mixin flex($value){
+  -webkit-flex:$value;   // safari用
+  flex:$value;
+}
+
+/*==================================================
+
+  3.gradient
+
+==================================================*/
+
+/*——————— ▼ 明 → 暗 ———————*/
+@mixin gra-light($color, $lighten:10){
+  background-color: $color;
+  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+
+/*——————— ▼ 暗 → 明 ———————*/
+@mixin gra-dark($color, $darken:10){
+  background-color: $color;
+  @include background-image(linear-gradient(darken($color, $darken) 0%, $color 100%));
+}
+
+/*==================================================
+
+  4.position
+
+==================================================*/
+
+/*——————— ▼ 上 真ん中 ———————*/
+@mixin absolute-top-center($top: 0) {
+  position: absolute;
+  top: $top + rem;
+  left: 0;
+  right:0;
+  margin:auto;
+}
+
+/*——————— ▼ 左上 ———————*/
+@mixin absolute-top-left($top: 0, $left: 0) {
+  position: absolute;
+  top: $top + rem;
+  left: $left + rem;
+}
+
+/*——————— ▼ 右上 ———————*/
+@mixin absolute-top-right($top: 0, $right: 0) {
+  position: absolute;
+  top: $top + rem;
+  right: $right + rem;
+}
+
+/*——————— ▼ 下 真ん中 ———————*/
+@mixin absolute-bottom-center($bottom: 0) {
+  position: absolute;
+  bottom: $bottom + rem;
+  left: 0;
+  right:0;
+  margin:auto;
+}
+
+/*——————— ▼ 左下 ———————*/
+@mixin absolute-bottom-left($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom + rem;
+  left: $left + rem;
+}
+
+/*——————— ▼ 右下 ———————*/
+@mixin absolute-bottom-right($bottom: 0, $right: 0) {
+  position: absolute;
+  bottom: $bottom + rem;
+  right: $right + rem;
+}
+
+/*——————— ▼ 上下中央 ———————*/
+@mixin absolute-center{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left:0;
+  margin:auto;
+}
+
+
+/*==================================================
+
+  5.other
+
+==================================================*/
+/*——————— ▼ 天地中央 ———————*/
+@mixin center {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*——————— ▼ opacity ———————*/
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacityIE: $opacity * 100;
+  filter: alpha(opacity=$opacityIE);
+}
+/*——————— ▼ border-radius ———————*/
+@mixin radius($size) {
+  @include border-radius($size);
+}
+
+/*——————— ▼ 正円 ———————*/
+@mixin circle($size){
+    width: $size + px;
+    height: $size + px;
+    @include border-radius(100%);
+}
+
+/*——————— ▼ 矢印 ———————*/
+@mixin arrow($direction: right, $size: 10, $color: $black){
+  $set: left;
+
+  @if $direction == left{
+      $set: right;
+  }@elseif $direction == top{
+      $set: bottom;
+  }@elseif $direction == bottom{
+      $set: top;
+  }@else{
+      $set: left;
+  }
+  $size: round($size / 2);
+
+  width: 0;
+  height: 0;
+  border: $size + px solid transparent;
+  border-#{$set}-color: $color;
+}

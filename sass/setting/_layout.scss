@@ -1,0 +1,197 @@
+@charset "utf-8";/* 必須 */
+/*========================================================
+
+  【初期設定】
+
+  1.コンテンツ幅
+  2.カラー設定
+  3.フォント設定
+
+========================================================*/
+
+/*========================================================
+
+  1.コンテンツ幅
+
+========================================================*/
+
+/*——————— ▼ TOPページ ———————*/
+article#top{
+  background: #fff;
+  background-image:url(../../images/index/body_bg.png);
+  background-attachment: fixed;
+  position: relative;
+
+  @include media_sp {
+    line-height: normal;
+  }
+
+  //&:before{
+  //  content: "";
+  //  width: 100%;
+  //  height: 100vh;
+  //  display: none;
+  //  background:#fff;
+  //  background-image:url(../../images/index/body_bg.png);
+  //  position: fixed;
+  //  top:0;
+  //  left:0;
+  //  z-index:-1;
+  //
+  //  @include media_sp {
+  //    display: block;
+  //    height: 600vh;
+  //    position: absolute;
+  //  }
+  //
+  //}
+
+  div.main-content{
+
+    @include media_sp {
+      z-index: 1;
+    }
+
+    section{
+      padding:5rem 0;
+
+      div.inner{
+        width:1120px;
+        margin:0 auto;
+
+        @include media_tab {
+          width: 90%;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+/*——————— ▼ 下層ページ ———————*/
+article.page{
+  background: #fff;
+  background-image:url(../../images/index/body_bg.png);
+  background-attachment: fixed;
+
+  @include media_sp {
+    background-image: none;
+    background: none;
+  }
+
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background:#fff;
+    background-image:url(../../images/index/body_bg.png);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+
+    @include media_sp {
+      display: block;
+    }
+
+  }
+
+  div.main-content{
+    
+    @include media_sp {
+      z-index: 1;
+    }
+
+    section{
+      padding:8rem 0;
+
+      @include media_sp {
+        padding:4rem 0;
+      }
+
+      div.inner{
+        width:1120px;
+        margin:0 auto;
+
+        @include media_tab {
+          width: 90%;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+/*========================================================
+
+  2.カラー設定
+
+========================================================*/
+
+/*——————— ▼ ベースカラー（背景や余白） ———————*/
+$base-color: #fff;
+
+/*——————— ▼ メインカラー（navや見出し） ———————*/
+$main-color: #2fbdf0;
+
+/*——————— ▼ サブカラー（リンクやアクセント部分） ———————*/
+$sub-color: #f0a330;
+
+
+/*========================================================
+
+  3.フォント設定
+
+========================================================*/
+
+/*——————— ▼ フォント設定 ———————*/
+//サイズガイド 62.5%の場合　1rem = 10px  1.5rem = 15px 1.8rem = 18px
+html{
+  width:100%;
+  font-size: 62.5%; // 1rem = 10px;
+
+  body{
+    width:100%;
+    @include fs(15);
+    font-family: "メイリオ", "Hiragino Kaku Gothic ProN", sans-serif;
+    line-height: 1.5;
+    color:#333;
+    background:url(../../images/index/body_bg.png);
+    background-attachment: fixed;
+
+    @include media_sp {
+      @include fs(12);
+    }
+
+    a{
+      text-decoration: none;
+      @include transition(.3s);
+
+      &:hover{
+        opacity: .7;
+      }
+
+    }
+
+  }
+
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+//オリジナルフォント(../../common/font/ファイル名)
+@font-face {
+  font-family: 'myfont';
+  src: url(../../common/font/ファイル名);
+}

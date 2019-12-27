@@ -25,6 +25,8 @@
   <!-- ▼　スタイルシート -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/style.css">
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
 
   <!-- fontawesome -->
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -33,12 +35,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
   <!-- ▼　js　-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
 
   <!-- ▼　ファビコン　-->
 
 
   <!-- ▼　サイトタイトル　-->
-  <title><!-- タイトル --></title>
+  <title>Aventa</title>
 
   <?php wp_head(); ?>
 
