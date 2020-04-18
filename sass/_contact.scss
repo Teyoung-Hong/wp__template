@@ -1,0 +1,111 @@
+@charset 'utf-8';
+
+main.page-contact{
+
+  @include media_phab{
+    background-image: url(../images/contact/bg-sp.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  section.contact-top{
+    height: 50vh;
+    background-image: url(../images/contact/mv.png);
+    background-size: cover;
+    background-position: center;
+    @include flexbox;
+    @include align(center);
+    @include justify(center);
+
+    @include media_phab{
+      height: 30vh;
+      background: none;
+    }
+
+    div.contact-top__inner{
+        color: white;
+        text-align: center;
+
+        @include media_phab{
+        }
+        
+      p.contact-top__title{
+        font-size: 60px;
+        border-bottom: 6px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+
+        @include media_phab{
+          border-bottom: 1px solid #5F0202;
+          color: #5F0202;
+          font-size: 30px;
+          width: 80%;
+          margin: 0 auto 30px auto;
+        }
+
+        span{
+          color: #CE0808;
+
+          @include media_phab{
+            color: #5F0202;
+          }
+        }
+      }
+      p.contact-top__subtitle{
+        font-size: 14px;
+        padding: 0 15px;
+
+        @include media_phab{
+          color: #333;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+
+  section.contact-main{
+    padding: 100px 0 200px 0;
+    background-image: url(../images/contact/bg.png);
+    background-size: cover;
+    background-position: center;
+
+    @include media_phab{
+      background: none;
+      padding: 30px 0 100px 0;
+    }
+
+    div.contact-main__inner{
+      form{
+        width: 40%;
+        margin: 0 auto;
+
+        @include media_phab{
+          width: 80%;
+        }
+
+        input::placeholder, textarea::placeholder{
+          color: initial;
+          padding: 5px 10px;
+        }
+
+        .wpcf7-submit{
+          width: 30%;
+          float: right;
+          padding: 5px;
+          font-size: 18px;
+          border: none;
+          color: #CE0808;
+
+          @include media_phab{
+            border-radius: 30px;
+            background-color: #CE0808;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+

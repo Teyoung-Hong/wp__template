@@ -1,0 +1,216 @@
+header.header{
+  width: 100%;
+  height: 50px;
+  background-color: #626262;
+  position: fixed;
+  top: 0;
+  z-index: 900;
+
+  @include media_phab{
+    background-color: transparent;
+  }
+
+  div.header__inner{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    @include flexbox;
+    @include align(center);
+    @include justify(space-between);
+
+    @include media_phab{
+      width:  90%;
+    }
+
+    a{
+      display: none;
+
+      @include media_phab{
+        display: block;
+      }
+
+      img.header__icon-home{
+      }
+    }
+
+
+    button.drawer-button{
+      background: transparent;
+      border-style: none;
+      width: 60px;
+      height: 25px;
+      padding: 0;
+      position: relative;
+      z-index: 100;
+      @include transition(0.5s);
+
+      @include media_phab{
+        height: 12px;
+        width: 25px;
+      }
+
+      &:focus{
+        outline: 0;
+      }
+
+      span.drawer-border{
+        height: 3px;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        @include transition(0.5s);
+
+        @include media_phab{
+          height: 1px;
+        }
+
+        &:nth-child(1){
+          top: 0;
+        }
+        &:nth-child(2){
+          top: 11px;
+
+          @include media_phab{
+            top: 5px;
+          }
+        }
+        &:nth-child(3){
+          bottom: 0px;
+        }
+      }
+
+      &.open{
+        border: 3px solid #CE0808;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+
+        .drawer-border{
+          background-color: #CE0808;
+          &:nth-child(1){
+            top: 15px;
+            left: 8px;
+            width: 50%;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2){
+            left: 0;
+            width: 0;
+          }
+          &:nth-child(3){
+            top: 15px;
+            left: 8px;
+            width: 50%;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    i.icon__instagram{
+      @include media_phab{
+        display: none;
+      }
+    }
+  }
+}
+section.drawer-menu{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #B9B9B9;
+  display: none;
+  z-index: 99;
+
+  .drawer-menu__pc{
+    @include flexbox;
+
+    @include media_phab{
+      display: none;
+    }
+
+    nav.drawer-nav{
+      width: 400px;
+      height: 100vh;
+      background-color: white;
+      @include flexbox;
+      @include align(center);
+      @include justify(center);
+      @include direction(column);
+      margin-left: 10%;
+
+      li.nav-list{
+        border-bottom: 3px solid #A22020;
+        padding: 15px 0 15px 10px;
+        margin-bottom: 10px;
+        width: 60%;
+
+        a.nav-link{
+          color: #5E5E5E;
+        }
+      }
+      div.nav-icon__box{
+        text-align: center;
+
+        i.nav-icon{
+        }
+      }
+    }
+    div.drawer-right{
+      // @include flexbox;
+      // @include align(center);
+      // @include justify(center);
+      // width: 40%;
+      position: absolute;
+      top:15%;
+      // bottom: 10%;
+      right: 10%;
+
+      img.drawer-bg-img{
+        width: 550px;
+        height: 500px;
+      }
+    }
+  }
+  .drawer-menu__sp{
+    display: none;
+
+    @include media_phab{
+      display: block;
+      background-image: url(../images/common/hum-sp-bg.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+    div.drawer-sp__inner{
+      width: 80%;
+      height: 100vh;
+      margin: 0 auto;
+      @include flexbox;
+      @include align(center);
+      @include justify(center);
+      @include direction(column);
+
+      nav.drawer-nav-sp{
+        width: 100%;
+
+        li.nav-list-sp{
+          @include media_phab{
+            padding-bottom: 10px;
+            border-bottom: 1px solid #A22020;
+            width: 100%;
+            text-align: right;
+            margin-bottom: 30px;
+          }
+
+          a.nav-link{
+            color: #333;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

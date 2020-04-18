@@ -1,0 +1,100 @@
+@charset 'utf-8';
+
+main.page-traction{
+  background-image: url(../images/traction/bg.png);
+  background-size: cover;
+  background-position: center;
+
+  section.traction-wrapper{
+    width: 100%;
+    position: relative;
+    padding-top: 80px;
+
+    div.traction-inner{
+      width: 90%;
+      margin: 0 auto;
+
+      p.traction-title{
+        font-size: 25px;
+        margin-bottom: 25px;
+      }
+
+      div.traction-items{
+        padding-bottom: 50px;
+        // @include flexbox;
+        // @include justify(space-between);
+
+        div.modal-body{
+          display: none;
+          max-width: 70% !important;
+        }
+
+        div.traction-item{
+          width: 29%;
+          z-index: 1; // modalのz-indexが2のため
+          float: left;
+          margin: 0 2%;
+          height: 350px;
+
+          @include media_phab{
+            height: 200px;
+            width: 46%;
+          }
+
+          a.modal-trigger{
+            color: black;
+
+            div.traction-item__image{
+              height: 200px;
+              width: 100%;
+
+              @include media_phab{
+                height: 120px;
+              }
+
+              img{
+                max-height: 100%;
+                min-height: 100%;
+              }
+            }
+            p.traction-item__title{
+              margin: 15px 0;
+              text-align: center;
+              font-size: 15px;
+
+              @include media_phab{
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+div.jquery-modal{
+  div.modal-body{
+    max-width: 70%;
+    width: 70%;
+
+    @include media_phab{
+      max-width: 90%;
+      width: 90%;
+      border-radius: 0;
+      background: none;
+      padding: 0;
+      color: white;
+    }
+
+    img{
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    p{
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,319 @@
+@charset 'utf-8';
+
+$screen-bg-color: #5D5C5C;
+$main-font-color: #5F0202;
+
+main.page-about{
+
+  background-color: #E4E4E4;
+  color: black;
+  
+  // section about-top
+  section.about-top{
+    background-image: url(../images/about/mv.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    @include flexbox;
+    @include align(center);
+    @include justify(center);
+
+    @include media_phab{
+      background-image: none;
+    }
+
+    div.about-top__inner{
+      width: 80%;
+      color: white;
+
+      @include media_phab{
+        color: $main-font-color;
+      }
+
+      p.about-top__title{
+        font-size: 50px;
+        font-weight: 780;
+        margin-bottom: 30px;
+
+        @include media_phab{
+          font-size: 60px;
+          font-weight: 400;
+        }
+      }
+
+      p.about-top__subtitle{
+        font-size: 15px;
+      }
+    }
+  }
+
+
+  // about-main-bg
+  div.about-main-bg{
+    background-image: url(../images/about/bg.png);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+  
+    @include media_phab{
+      background-image: none;
+    }
+
+  // section about-greeting
+  section.about-greeting{
+    margin-bottom: 100px;
+
+    div.about-greeting__inner{
+      width: 90%;
+      margin: 0 auto;
+      padding: 80px 0;
+      border-bottom: 10px solid #A22020;
+
+      @include media_phab{
+        background-color: $main-font-color;
+        box-shadow: 0px 0px 15px black;
+        color: white;
+        padding: 40px 0;
+        border: none;
+      }
+
+      p.about-greeting__title{
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 40px;
+      }
+
+      div.about-greeting-box{
+        @include flexbox;
+
+        @include media_phab{
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        div.about-greeting__left{
+          width: 45%;
+          text-align: center;
+
+          @include media_phab{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+          }
+
+          img{
+            max-width: 50%;
+            width: 50%;
+            margin-bottom: 40px;
+          }
+
+          p.about-greeting__ceo{
+            font-size: 12px;
+          }
+        }
+
+        div.about-greeting__right{
+          width: 55%;
+
+          @include media_phab{
+            width: 100%;
+          }
+
+          p.about-greeting__article{
+            width: 70%;
+            line-height: 2;
+
+            @include media_phab{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // section about-goal
+  section.about-goal{
+    margin-bottom: 100px;
+
+    div.about-goal__inner{
+      width: 90%;
+      margin: 0 auto;
+      border-bottom: 10px solid #A22020;
+      padding-bottom: 100px;
+
+      @include media_phab{
+        border: none;
+      }
+
+      // head
+      p.about-goal-head{
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 80px;
+
+        @include media_phab{
+          color: #5F0202;
+        }
+      }
+      // copy
+      div.about-goal-copy{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-flow: row-reverse;
+        height: 400px;
+        margin-bottom: 50px;
+        opacity: 0;
+
+        p.about-goal-copy-article{
+          line-height: 4;
+          writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          -webkit-writing-mode:vertical-rl;
+          font-size: 20px;
+          letter-spacing: 10px;
+
+
+          @include media_phab{
+            font-size: 18px;
+            letter-spacing: 4px;
+          }
+        }
+      }
+      // bottom
+      div.about-goal-bottom{
+        width: 80%;
+        margin: 0 auto;
+
+        @include media_phab{
+          width: 90%;
+        }
+
+        p.about-goal-bottom-head{
+          font-size: 16px;
+          margin-bottom: 20px;
+
+          @include media_phab{
+            line-height: 30px;
+            margin-bottom: 100px;
+          }
+        }
+        div.about-goal-nav{
+          @include flexbox;
+          @include justify(space-between);
+
+          @include media_phab{
+            display: block;
+          }
+
+          div.about-goal-nav-item{
+            width: 28%;
+            text-align: center;
+
+            @include media_phab{
+              margin-bottom: 50px;
+              width: 100%;
+            }
+              &:hover{
+                opacity: 0.7;
+              }
+
+
+            a.about-goal-link{
+              color: black;
+
+              p.about-goal-nav-title-sp{
+                display: none;
+
+
+                @include media_phab{
+                  display: block;
+                  color: $main-font-color;
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+              }
+              img{
+              }
+              p.about-goal-nav-title{
+                margin-bottom: 15px;
+
+                @include media_phab{
+                  display: none;
+                }
+              }
+              p.about-goal-nav-subtitle{
+              }
+            }
+          }
+        }
+      }
+      // bottom-end
+    }
+  }
+
+  // section about-recruit
+  section.about-recruit{
+    margin-bottom: 100px;
+
+    div.about-recruit__inner{
+      width: 90%;
+      margin: 0 auto;
+      border-bottom: 10px solid #A22020;
+      padding-bottom: 100px;
+
+      @include media_phab{
+        background-color: $main-font-color;
+        box-shadow: 0px 0px 15px black;
+        color: white;
+        padding: 40px 0;
+        border: none;
+      }
+
+      p.about-recruit-head{
+        text-align: center;
+        font-size: 25px;
+      }
+      p.about-recruit-subhead{
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+
+      table.about-recruit-table{
+        width: 90%;
+        margin: 0 auto;
+
+        tr.about-recruit-row{
+          margin-bottom: 30px;
+          display: block;
+
+          th.about-recruit-head{
+            width: 25%;
+            font-size: 15px;
+            text-align: left;
+            font-weight: normal;
+
+            @include media_phab{
+              width: 30%;
+            }
+          }
+          td.about-recruit-data{
+            width: 75%;
+            font-size: 13px;
+          text-align: left;
+          }
+        }
+      } // table
+    }
+  }
+}// about-main-bg
+}
+
+
+
+

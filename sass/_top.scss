@@ -1,0 +1,155 @@
+@charset 'utf-8';
+
+// 動画再生後の背景画像がつくクラス
+.sp-ended{
+
+  @include media_phab{
+    background-image: url(../images/top/sp-bg.png);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+main.page-top{
+  background-color: black;
+
+  section.section__top{
+    position: relative;
+
+    div.top__inner{
+      width: 100%;
+
+      div.video__pc{
+        // background-image: url(../images/top/link-ama.png);
+
+        @include media_phab{
+          display: none;
+        }
+        
+        video#p-video{
+          min-height: 100vh;
+          max-width: 100%;
+        }
+      }
+
+      div.video__sp{
+        display: none;
+
+        @include media_phab{
+          display: block;
+        }
+
+        video#s-video{
+          height: 100vh;
+          max-width: 100%;
+          min-width: 100%;
+        }
+      }
+
+      div.video-content{
+        display: none;
+        position: absolute;
+        width: 90%;
+        top: 30%;
+        left: 5%;
+        color: white;
+        // @include flexbox;
+
+        @include media_phab{
+          width: 100%;
+          top: 10%;
+          left: 0;
+        }
+
+        div.video-content-left{
+          width: 50%;
+          padding-top: 50px;
+
+          @include media_phab{
+            width: 100%;
+          }
+
+          h1.v-c-title{
+            font-size: 70px;
+            margin-bottom: 25px;
+            text-align: center;
+
+            @include media_phab{
+              font-size: 60px;
+              font-weight: normal;
+              margin: 0;
+            }
+          }
+          p.v-c-subtitle{
+            font-size: 22px;
+            margin-bottom: 80px;
+            text-align: center;
+
+            @include media_phab{
+              font-size: 18px;
+            }
+          }
+          div.v-c-sp-tate{
+            display: none;
+
+            @include media_phab{
+              display: block;
+              @include flexbox;
+              @include justify(end);
+              flex-flow: row-reverse;
+            }
+
+            p.v-c-sp-tatebun{
+              line-height: 2;
+              writing-mode: vertical-rl;
+              -ms-writing-mode: tb-rl;
+              -webkit-writing-mode:vertical-rl              ;
+
+              @include media_phab{
+                font-size: 20px;
+                padding-right: 10%;
+              }
+            }
+          }
+          div.v-c-link{
+            @include flexbox;
+            @include justify(space-evenly);
+            @include align(baseline);
+
+            @include media_phab{
+              width: 95%;
+              margin-top: 40px;
+            }
+
+            a{
+              text-align: right;
+
+              img.v-c-link-image{
+                width: 70%;
+              }
+            }
+          }
+        }
+
+        div.video-content-right{
+          width: 50%;
+          @include flexbox;
+          @include justify(center);
+          flex-flow: row-reverse;
+          font-size: 22px;
+
+          @include media_phab{
+            display: none;
+          }
+
+          div.v-c-pc-tate{
+            line-height: 4;
+            writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode:vertical-rl
+          }
+        }
+      }
+    }
+  }
+}

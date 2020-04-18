@@ -1,0 +1,17 @@
+footer.footer{
+  background-color: #A22020;
+  padding-left: 50px;
+  height: 80px;
+  line-height: 80px;
+  width: 100%;
+
+  button.footer-contact{
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 30px;
+
+    a{
+      color: #A22020; 
+    }
+  }
+}

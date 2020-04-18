@@ -1,5 +1,7 @@
 <footer class="footer">
-  <p class="copyright"><small><!-- copyright --></small></p>
+  <button class="footer-contact">
+    <a href="<?php bloginfo('url'); ?>/contact">CONTACT</a>
+  </button>
 </footer>
 <?php wp_footer(); ?>
 </body>

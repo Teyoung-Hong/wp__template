@@ -1,0 +1,211 @@
+@charset 'utf-8';
+
+main.page-business{
+  padding-bottom: 100px;
+  background-color: #B7B7B7;
+
+  @include media_phab{
+    background-image: url(../images/business/bg-sp.png);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+  }
+
+  section.business-top{
+    background-image: url(../images/business/mv.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    color: white;
+    @include flexbox;
+    @include align(center);
+    @include justify(center);
+
+    @include media_phab{
+      background: none;
+    }
+
+    div.business-top__inner{
+      width: 80%;
+
+      @include media_phab{
+        width: 90%;
+      }
+
+      h1.business-top-title{
+        font-size: 50px;
+        font-weight: 780;
+        margin-bottom: 30px;
+
+        @include media_phab{
+          font-size: 20px;
+          font-weight: normal;
+          padding-bottom: 12px;
+          border-bottom: 1px solid #652C2C;
+        }
+      }
+      p.business-top-subtitle{
+        font-size: 20px;
+
+        @include media_phab{
+          font-size: 12px;
+        }
+      }
+    }
+  } // section.business-top
+
+  section.business-intro{
+    div.business-intro__inner{
+      .intro-wrapper{
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        padding: 100px 0;
+
+        &.first{
+          background-image: url(../images/business/seisaku-bg.png);
+        }
+        &.second{
+          background-image: url(../images/business/seisaku-bg.png);
+        }
+        &.third{
+          background-image: url(../images/business/unpan-bg.png);
+        }
+        &.fourth{
+          background-image: url(../images/business/sekou-bg.png);
+        }
+
+        @include media_phab{
+          &.first,
+          &.second,
+          &.third,
+          &.fourth{
+            background-image: none;
+          }
+        }
+        
+
+        .intro-inner{
+          width: 90%;
+          margin: 0 auto;
+
+          div.intro-top{
+            @include flexbox;
+            @include justify(center);
+            @include align(center);
+            margin-bottom: 40px;
+
+            @include media_phab{
+              @include align(baseline);
+              @include justify(space-evenly);
+            }
+
+            // intro-top left
+            .intro-top-left{
+              width: 35%;
+              height: 300px;
+              border-radius: 150px;
+              background-color: rgba(255, 255, 255, 0.6);
+              margin-right: 10%;
+              position: relative;
+              @include flexbox;
+              @include justify(center);
+              @include align(center);
+              @include direction(column);
+
+              @include media_phab{
+                width: 25%;
+                margin-right: 3%;
+                height: 100px;
+                border-radius: 0;
+              }
+
+              .intro-top-num{
+                font-size: 60px;
+
+                @include media_phab{
+                  position: absolute;
+                  top: -30px;
+                  right: -10px;
+                }
+              }
+              .intro-top-title-big{
+                font-size: 80px;
+                color: rgba(162, 32, 32, 0.7);
+                position: absolute;
+                right: 15%;
+
+                @include media_phab{
+                  font-size: 30px;
+                  position: absolute;
+                  right: 15%;
+                  bottom: 10px;
+                }
+              }
+              .intro-top-title-small{
+                font-size: 60px;
+
+                @include media_phab{
+                  display: none;
+                }
+              }
+            }
+            // intro-top right
+            .intro-top-right{
+              width: 55%;
+              height: auto;
+
+              @include media_phab{
+                width: 70%;
+                height: 200px;
+              }
+
+              img{
+
+              }
+            }
+          }
+
+          div.intro-bottom{
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+            @include flexbox;
+            @include justify(space-evenly);
+            @include align(center);
+            padding: 15px 0;
+
+            @include media_phab{
+              display: block;
+            }
+
+            .intro-bottom-item{
+              width: 30%;
+
+              @include media_phab{
+                width: 96%;
+                margin: 0 auto 20px auto;
+              }
+
+              .intro-bottom-title{
+                color: #A22020;
+                margin-bottom: 20px;
+                font-size: 16px;
+
+                @include media_phab{
+                  margin-bottom: 0;
+                }
+              }
+
+              .intro-bottom-article{
+                color: #181611;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  } // section.business-top
+}

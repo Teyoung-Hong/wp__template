@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*========================================================
 
-  1.transform
+  1.transform (animation for the first)
   2.flex-box
   3.gradient
   4.position
@@ -17,6 +17,12 @@
 //ベンダープレフィックス
 $set-prefix: -webkit-, -moz-, -ms-, -o-, '';
 
+/*——————— ▼ animation ———————*/
+@mixin delay($value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}animation-delay: $value;
+  }
+}
 
 /*——————— ▼ transition ———————*/
 @mixin transition($value) {
@@ -97,6 +103,11 @@ $set-prefix: -webkit-, -moz-, -ms-, -o-, '';
 @mixin flex($value){
   -webkit-flex:$value;   // safari用
   flex:$value;
+}
+
+@mixin direction($value){
+  -webkit-flex-direction: $value;
+  flex-direction: $value;
 }
 
 /*==================================================

@@ -1,0 +1,549 @@
+@charset 'utf-8';
+
+/*------------------------------
+common
+------------------------------*/
+$window-height: 100vh;
+$main-color: #9B3A3A;
+$white-color: #ffffff;
+
+
+main.page-strength{
+
+  @include media_phab{
+    background-image: url(../images/strength/bg-sp.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+/*------------------------------
+strength-top
+------------------------------*/
+  section.strength-top{
+    background-color: $main-color;
+    height: calc(#{$window-height} - 50px);
+    width: 100%;
+    @include flexbox;
+    @include align(center);
+
+    @include media_phab{
+      background: none;
+    }
+
+    div.strength-top__inner{
+      margin-left: 40%;
+      color: white;
+
+      @include media_phab{
+        width: 90%;
+        margin: 0 auto;
+        color: $main-color;
+      }
+
+      p.strength-top-title{
+        font-size: 150px;
+        font-weight: 700;
+        line-height: 1;
+
+        @include media_phab{
+          font-size: 60px;
+          font-weight: normal;
+          line-height: 1.2;
+        }
+      }
+      p.strength-top-subtitle{
+        font-size: 25px;
+        margin-top: 20px;
+
+        @include media_phab{
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  /*------------------------------
+  strength-about
+  ------------------------------*/
+
+  div.strength-main-bg{
+    background-image: url(../images/strength/main-bg.png);
+
+    @include media_phab{
+      background: none;
+    }
+
+  section.strength-about{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+
+    @include media_phab{
+      width: 90%;
+      margin: 0 auto 150px auto;
+      height: auto;
+    }
+
+    .strength-about-head{
+      position: absolute;
+      top: 40px;
+      left: 5%;
+      line-height: 100px;
+      font-size: 100px;
+      color: $main-color;
+      z-index: 200;
+      opacity: 0;
+
+
+      @include media_phab{
+        display: none;
+      }
+    }
+    .strength-about-head-sp{
+        display: none;
+
+        @include media_phab{
+          display: block;
+          font-size: 35px;
+          color: $main-color;
+        }
+    }
+
+    .strength-about-content{
+      position: absolute;
+      right: 5%;
+      bottom: 0;
+      width: 100%;
+      z-index: 100;
+
+      @include media_phab{
+        position: initial;
+      }
+
+      p.about-content-title{
+        text-align: right;
+        font-size: 25px;
+        margin-bottom: 15px;
+        padding-right: 20px;
+
+        @include media_phab{
+          font-size: 18px;
+          padding: 0;
+        }
+      }
+
+      div.about-content-image{
+        background-image: url(../images/strength/leadby.png);
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        width: 70%;
+        position: relative;
+        margin-left: 30%;
+
+        @include media_phab{
+          height: 200px;
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        p.about-content-image-article{
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          font-size: 12px;
+          line-height: 20px;
+          color: white;
+
+          @include media_phab{
+            display: none;
+          }
+        }
+      }
+      p.about-content-article{
+
+        display: none;
+
+        @include media_phab{
+          color: $main-color;
+          text-align: center;
+          margin-top: 40px;        
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  /*------------------------------
+  strength-desc
+  ------------------------------*/
+  section.strength-desc{
+    div.strength-desc-top{
+      height: 150px;
+      line-height: 100px;
+      position: relative;
+
+      p.strength-desc-top-title{
+        font-size: 130px;
+        position: absolute;
+        top: 0;
+        left: 12%;
+        color: $white-color;
+        z-index: 200;
+        opacity: 0;
+        @include delay(1s);
+
+        @include media_phab{
+          display: none;
+        }
+      }
+      div.strength-desc-top-cover{
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        background-color: #5F0202;
+        z-index: 100;
+        opacity: 0;
+
+        @include media_phab{
+          display: none;
+        }
+      }
+      p.strength-desc-top-title-sp{
+        display: none;
+
+        @include media_phab{
+          display: block;
+          color: #9B3A3A;
+          font-size: 30px;
+          line-height: 1.5;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    div.strength-desc-body{
+
+      @include media_phab{
+        // background-image: url(../images/strength/sample-circle.png);
+        // background-size: cover;
+        // background-position: center;
+      }
+
+      div.strength-desc-body__inner{
+        width: 90%;
+        margin: 100px auto;
+        position: relative;
+        padding: 120px 0 190px 0;
+        @include flexbox;
+        @include justify(center);
+        @include align(center);
+
+        @include media_phab{
+          width: 90%;
+          padding: 50px 0 70px 0;
+          margin: 30px auto 100px auto;
+        }
+
+        img{
+          max-width: 50%;
+
+          @include media_phab{
+            max-width: 100%;
+          }
+        }
+
+        div.strength-desc-body-corner{
+          width: 25%;
+          position: absolute;
+          background-size: cover;
+          background-position: center;
+
+          @include media_phab{
+            width: 40%;
+            background: none;
+          }
+
+          &.top-left{
+            top: 0;
+            left: 0;
+
+            div.strength-desc-body-corner-image{
+              background-image: url(../images/strength/top-left.png);
+            }
+          }
+          &.top-right{
+            top: 0;
+            right: 0;
+
+            div.strength-desc-body-corner-image{
+              background-image: url(../images/strength/top-right.png);
+            }
+          }
+          &.bottom-left{
+            bottom: 0;
+            left: 0;
+
+            div.strength-desc-body-corner-image{
+              background-image: url(../images/strength/bottom-left.png);
+            }
+          }
+          &.bottom-right{
+            bottom: 0;
+            right: 0;
+
+            div.strength-desc-body-corner-image{
+              background-image: url(../images/strength/bottom-right.png);
+            }
+          }
+
+          div.strength-desc-body-corner-image{
+            // 後でimgに変更
+            margin-bottom: 12px;
+            height: 150px;
+            width: 100%;
+            background: #333;
+
+            @include media_phab{
+              display: none;
+            }
+          }
+          p.strength-desc-body-corner-article{
+            text-align: center;
+            font-size: 12px;
+
+            @include media_phab{
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  } //strength-desc
+
+  /*------------------------------
+  strength-sub
+  ------------------------------*/
+
+  section.strength-sub{
+    position: relative;
+    height: 600px;
+
+    @include media_phab{
+      background-color: rgba(255,255,255,0.3);
+      height: auto;
+      margin-bottom: 150px;
+      padding-top: 30px;
+    }
+
+    div.sub-red-zone{
+      position: absolute;
+      right: 0;
+      top: 170px;
+      height: 220px;
+      width: 70%;
+      z-index: 10;
+      background-color: #9B3A3A;
+
+      @include media_phab{
+        display: none;
+      }
+    }
+
+    div.sub-inner{
+      position: absolute;
+      top: 100px;
+      right: 10%;
+      text-align: right;
+      z-index: 20;
+
+      @include media_phab{
+        position: initial;
+        text-align: center;
+        color: #5F0202;
+      }
+
+      p.sub-top{
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: white;
+
+        @include media_phab{
+          font-size: 12px;
+        }
+      }
+      p.sub-middle{
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        @include media_phab{
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      }
+      p.sub-bottom{
+        font-size: 100px;
+        font-weight: 700;
+        opacity: 0;
+
+        @include media_phab{
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  /*------------------------------
+  strength-traction
+  ------------------------------*/
+  section.strength-traction{
+    padding-bottom: 150px;
+
+    div.strength-header{
+      background-image: url(../images/strength/straction-header.png);
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      width: 100%;
+      margin-bottom: 50px;
+      @include flexbox;
+      @include justify(center);
+      @include align(center);
+
+      @include media_phab{
+        display: none;
+      }
+
+      p.straction-title{
+        font-size: 40px;
+        color: white;
+      }
+    }
+
+    div.straction-main{
+      margin-bottom: 200px;
+
+      @include media_phab{
+        margin-bottom: 100px;
+      }
+
+      div.straction-main__inner{
+        width: 60%;
+        margin: 0 auto;
+        @include flexbox;
+
+        @include media_phab{
+          display: block;
+          width: 80%;
+          padding: 50px 15%;
+          background-color: rgba(220, 220, 220, 1);
+          border-radius: 70px;
+          box-shadow: 0px 0px 16px black;
+        }
+
+        p.straction-main__sp{
+          display: none;
+
+          @include media_phab{
+            display: block;
+            font-size: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid white;
+            text-align: center;
+            letter-spacing: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0px 1px 0px grey;
+          }
+        }
+
+        div.straction-main__left{
+          width: 50%;
+
+          @include media_phab{
+            width: 100%;
+          }
+
+          div.straction-main__item{
+            width: 80%;
+
+            @include media_phab{
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            &.first{
+              margin-bottom: 150px;
+
+              @include media_phab{
+                margin-bottom: 30px;
+              }
+            }
+
+            p.straction-main__title{
+              text-align: center;
+              font-size: 35px;
+
+              @include media_phab{
+                text-align: left;
+                font-size: 15px;
+              }
+            }
+            img{
+              max-width: 100%;
+            }
+          }
+        }
+        div.straction-main__right{
+          width: 50%;
+          @include flexbox;
+          @include justify(right);
+          @include direction(column);
+
+          @include media_phab{
+            width: 100%;
+          }
+
+          div.straction-main__item{
+            width: 80%;
+            margin-left: 20%;
+
+            @include media_phab{
+              width: 100%;
+              margin-left: 0;
+              margin-bottom: 30px;
+            }
+
+            &.first{
+              margin-bottom: 150px;
+              margin-top: 150px;
+
+              @include media_phab{
+                margin-bottom: 30px;
+                margin-top: 0;
+              }
+            }
+
+            p.straction-main__title{
+              text-align: center;
+              font-size: 35px;
+
+              @include media_phab{
+                text-align: left;
+              }
+            }
+            img{
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  } // strenght-main-bg
+}

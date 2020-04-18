@@ -15,120 +15,21 @@
 
 ========================================================*/
 
-/*——————— ▼ TOPページ ———————*/
-article#top{
-  background: #fff;
-  background-image:url(../../images/index/body_bg.png);
-  background-attachment: fixed;
-  position: relative;
-
-  @include media_sp {
-    line-height: normal;
-  }
-
-  //&:before{
-  //  content: "";
-  //  width: 100%;
-  //  height: 100vh;
-  //  display: none;
-  //  background:#fff;
-  //  background-image:url(../../images/index/body_bg.png);
-  //  position: fixed;
-  //  top:0;
-  //  left:0;
-  //  z-index:-1;
-  //
-  //  @include media_sp {
-  //    display: block;
-  //    height: 600vh;
-  //    position: absolute;
-  //  }
-  //
-  //}
-
-  div.main-content{
-
-    @include media_sp {
-      z-index: 1;
-    }
-
-    section{
-      padding:5rem 0;
-
-      div.inner{
-        width:1120px;
-        margin:0 auto;
-
-        @include media_tab {
-          width: 90%;
-        }
-      }
-
-    }
-
-  }
-
+main.page{
+  padding-top: 50px;
+  // padding-bottom: 100px;
 }
 
+// input
+//   &::placeholder,
+//   &:-ms-input-placeholder,
+//   &::-ms-input-placeholder{
+//     color: red;
+// }
 
-/*——————— ▼ 下層ページ ———————*/
-article.page{
-  background: #fff;
-  background-image:url(../../images/index/body_bg.png);
-  background-attachment: fixed;
-
-  @include media_sp {
-    background-image: none;
-    background: none;
-  }
-
-  &:before{
-    content: "";
-    width: 100%;
-    height: 100vh;
-    display: none;
-    background:#fff;
-    background-image:url(../../images/index/body_bg.png);
-    position: fixed;
-    top:0;
-    left:0;
-    z-index:-1;
-
-    @include media_sp {
-      display: block;
-    }
-
-  }
-
-  div.main-content{
-    
-    @include media_sp {
-      z-index: 1;
-    }
-
-    section{
-      padding:8rem 0;
-
-      @include media_sp {
-        padding:4rem 0;
-      }
-
-      div.inner{
-        width:1120px;
-        margin:0 auto;
-
-        @include media_tab {
-          width: 90%;
-        }
-
-      }
-
-    }
-
-  }
-
+input::placeholder, textarea::placeholder{
+  color: #9B3A3A;
 }
-
 
 
 /*========================================================
@@ -138,10 +39,10 @@ article.page{
 ========================================================*/
 
 /*——————— ▼ ベースカラー（背景や余白） ———————*/
-$base-color: #fff;
+$base-color: #B9B9B9;
 
 /*——————— ▼ メインカラー（navや見出し） ———————*/
-$main-color: #2fbdf0;
+$main-color: #9B3A3A;
 
 /*——————— ▼ サブカラー（リンクやアクセント部分） ———————*/
 $sub-color: #f0a330;
@@ -162,11 +63,11 @@ html{
   body{
     width:100%;
     @include fs(15);
-    font-family: "メイリオ", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-family: "Toppan Bunkyu Mincho", "Hiragino Kaku Gothic ProN", sans-serif;
     line-height: 1.5;
     color:#333;
-    background:url(../../images/index/body_bg.png);
-    background-attachment: fixed;
+    //background:url(../../images/index/body_bg.png);
+    //background-attachment: fixed;
 
     @include media_sp {
       @include fs(12);
@@ -187,11 +88,10 @@ html{
 }
 
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+//@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 //オリジナルフォント(../../common/font/ファイル名)
-@font-face {
-  font-family: 'myfont';
-  src: url(../../common/font/ファイル名);
-}
+// @font-face {
+//   font-family: 'myfont';
+//   src: url(../../common/font/ファイル名);
+// }

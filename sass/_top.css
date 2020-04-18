@@ -1,0 +1,16 @@
+main.page-top section.section__top div.top__inner {
+  width: 100%;
+}
+
+main.page-top section.section__top div.top__inner div.top__pc video#video {
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+main.page-top section.section__top div.top__inner div.top__sp {
+  display: none;
+}
+
+header, footer {
+  display: none;
+}

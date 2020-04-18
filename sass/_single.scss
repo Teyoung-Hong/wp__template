@@ -1,0 +1,198 @@
+@charset 'utf-8';
+
+main.page-single{
+
+  @include media_phab{
+    padding-bottom: 100px;
+  }
+
+  // section single-top
+  section.single-top{
+    height: 50vh;
+    background-image: url(../images/single/mv.png);
+    background-size: cover;
+    background-position: center;
+    @include flexbox;
+    @include justify(center);
+    @include align(center);
+
+    @include media_phab{
+      background-image: none;
+      height: auto;
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
+
+    div.single-top__inner{
+      text-align: center;
+
+      p.single-top__title{
+        font-size: 30px;
+
+        span{
+          color: red;
+          margin-left: 5px;
+
+          @include media_phab{
+            color: black;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  // section single-top
+  section.single-main{
+    background-image: url(../images/single/bg.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include media_phab{
+      background-image: none;
+      padding: 0;
+    }
+
+    div.single-main__inner{
+      width: 80%;
+      margin: 0 auto;
+      @include flexbox;
+      @include justify(space-between);
+
+      @include media_phab{
+        width: 90%;
+        display: block;
+        box-shadow: 0px 0px 23px #741010;
+        background-color: rgba(116, 16, 16, 0.3);
+        padding: 50px 5%;
+      }
+
+      div.single-left{
+        width: 55%;
+
+        @include media_phab{
+          width: 100%;
+        }
+
+        div.single-
+
+        img.single-left-img{
+        }
+
+        div.single-left-bottom{
+
+          &.sp{
+            display: none;
+
+            @include media_phab{
+              margin-top: 20px;
+              display: block;
+
+              h1.single-left__title{
+                margin-bottom: 10px;
+                font-size: 25px;
+              }
+              div.single-left__date{
+                margin-bottom: 10px;
+                font-size: 11px;
+
+                span.single-left__date--title{
+                }
+                span.single-left__date--day{
+                }
+              }
+            }
+          }
+
+          &.pc{
+            margin-top: 20px;
+
+            @include media_phab{
+              display: none;
+            }
+
+            h1.single-left__title{
+              margin-bottom: 10px;
+              font-size: 25px;
+            }
+            div.single-left__date{
+              margin-bottom: 10px;
+              font-size: 11px;
+
+              span.single-left__date--title{
+              }
+              span.single-left__date--day{
+              }
+            }
+          }
+          // p.single-left__article{
+            p{
+            font-size: 15px;
+
+            @include media_phab{
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+      div.single-right{
+        width: 35%;
+
+        @include media_phab{
+          width: 100%;
+        }
+
+        div.single-right-item{
+          margin-bottom: 30px;
+
+          @include media_phab{
+            width: 50%;
+            float: left;
+          }
+
+          a.single-right-item-link{
+            color: black;
+            @include flexbox;
+            @include justify(space-evenly);
+
+            @include media_phab{
+              display: block;
+            }
+
+            div.single-right__image{
+              width: 45%;
+
+              @include media_phab{
+                width: 90%;
+                margin: 0 auto;
+              }
+            }
+
+            div.single-right__detail{
+              width: 45%;
+              @include flexbox;
+              @include justify(center);
+              @include direction(column);
+
+              @include media_phab{
+                width: 90%;
+                margin: 0 auto;
+                @include justify(flex-start);
+              }
+
+              p.single-right__title{
+                font-size: 15px;
+              }
+              p.single-right__article{
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

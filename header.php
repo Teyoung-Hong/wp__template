@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
 
   <!--  ▼　ビューポート -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--  ▼　デバイス認識 -->
   <?php
@@ -23,45 +23,81 @@
   ?>
 
   <!-- ▼　スタイルシート -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/reset.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/sass/style.css">
-  <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/js/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/js/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
   <!-- fontawesome -->
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
   <!-- animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
   <!-- ▼　js　-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/function.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/slick/slick.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.textillate.js"></script>                                                                                                                                                                  
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.lettering.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
 
   <!-- ▼　ファビコン　-->
 
 
   <!-- ▼　サイトタイトル　-->
-  <title>Aventa</title>
+  <title>鋼製技研</title>
 
   <?php wp_head(); ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src=""></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-130548866-4');
-</script>
 
 </head>
 <body <?php body_class(); ?>>
   <!-- ヘッダー -->
-  <header>
-    <div class="header clearfix">
-      <!-- ヘッダーを中身 -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="<?php bloginfo('url') ?>/home">
+        <img class="header__icon-home" src="<?php bloginfo('template_directory'); ?>/images/common/home.png" alt="">
+      </a>
+      <button id="js-drawer-button" class="drawer-button">
+        <span class="drawer-border"></span>
+        <span class="drawer-border"></span>
+        <span class="drawer-border"></span>
+      </button>
+      <i class="fab fa-instagram icon__instagram"></i>
     </div>
   </header>
+  <section id="js-drawer-menu" class="drawer-menu">
+    <div class="drawer-menu__pc">
+      <nav class="drawer-nav">
+        <li class="nav-list"><a class="nav-link" href="<?php bloginfo('url'); ?>/about">弊社について</a></li>
+        <li class="nav-list"><a class="nav-link" href="<?php bloginfo('url'); ?>/strength">弊社の強み</a></li>
+        <li class="nav-list"><a class="nav-link" href="<?php bloginfo('url'); ?>/business">事業内容</a></li>
+        <li class="nav-list"><a class="nav-link" href="<?php bloginfo('url'); ?>/news">News</a></li>
+        <li class="nav-list"><a class="nav-link" href="<?php bloginfo('url'); ?>/traction">実績一覧</a></li>
+        <li class="nav-list"><a class="nav-link" href="<?php bloginfo('url'); ?>/contact">お問い合せ</a></li>
+        <div class="nav-icon__box">
+          <i class="fab fa-instagram nav-icon"></i>
+        </div>
+      </nav>
+      <div class="drawer-right">
+        <img class="drawer-bg-img" src="<?php bloginfo('template_directory'); ?>/images/common/hamburger-bg.png" alt="鋼製技研">
+      </div>
+    </div>
+    <div class="drawer-menu__sp">
+      <div class="drawer-sp__inner">
+        <nav class="drawer-nav-sp">
+          <li class="nav-list-sp"><a class="nav-link" href="<?php bloginfo('url'); ?>/about">弊社について</a></li>
+          <li class="nav-list-sp"><a class="nav-link" href="<?php bloginfo('url'); ?>/strength">弊社の強み</a></li>
+          <li class="nav-list-sp"><a class="nav-link" href="<?php bloginfo('url'); ?>/business">事業内容</a></li>
+          <li class="nav-list-sp"><a class="nav-link" href="<?php bloginfo('url'); ?>/news">News</a></li>
+          <li class="nav-list-sp"><a class="nav-link" href="<?php bloginfo('url'); ?>/traction">実績一覧</a></li>
+          <li class="nav-list-sp"><a class="nav-link" href="<?php bloginfo('url'); ?>/contact">お問い合せ</a></li>
+        </nav>
+      </div>
+    </div>
+  </section>
